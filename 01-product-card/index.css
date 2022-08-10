@@ -1,0 +1,174 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F6F6F6;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-top: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  font-family: 'Arial';
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding-bottom: 24px;
+  width: 380px;
+  height: 481px;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 54px 11px rgba(34, 60, 80, 0.2);
+  transition: 0.3s;
+} 
+
+.card__img {
+  border-radius: 12px 12px 0 0 ;
+}
+
+.card-add {
+  position: absolute;
+  display: flex;
+  gap: 17px;
+  padding: 16px;
+}
+
+.new,
+.last {
+  text-transform: uppercase;
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: #2F2F2F;
+}
+
+.new {
+  background-color: #FDCFF3;
+}
+
+.last {
+  background-color: #FFCF56;
+}
+
+.card__title {
+  font-family: 'Arial';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2F2F2F;
+  padding: 20px 24px 16px;
+}
+
+.card__description {
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2F2F2F;
+  padding: 0 24px 24px;
+  height: 96px;
+}
+
+.card__button {
+  text-transform: uppercase;
+  margin: 24px;
+  color: #42940F;
+  font-family: 'Arial';
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  width: 87%;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  border: 2px solid #42940F;
+}
+
+.card:hover .card__button {
+  cursor: pointer;
+  background-color: #42940F;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.card:active .card__button {
+  background-color: #1F5200;
+  border: 2px solid #1F5200;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.ended,
+.card:active .ended,
+.card:hover .ended {
+  background-color: #4E4E4E;
+  border: 2px solid #4E4E4E;
+  color: #FFFFFF;
+}
+
+@media (max-width: 510px) {
+  h1 {
+    font-size: 34px;
+  }
+} 
+
+@media (max-width: 410px) {
+  .card {
+    width: 340px;
+  }
+
+  .card__img {
+    width: 340px;
+    height: auto;
+  }
+} 
+
+@media (max-width: 350px) {
+  .card {
+    width: 300px;
+  }
+
+  .card__img {
+    width: 300px;
+  }
+
+  h1 {
+    line-height: 40px;
+  }
+} 
