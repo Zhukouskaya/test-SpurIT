@@ -3,7 +3,10 @@
 const button = document.querySelector('.collapsible__button')
 const btns = document.querySelectorAll('.collapsible__action')
 const content = document.querySelector('.collapsible__content') 
-let contentVisibility = content.style.visibility = 'hidden'
+const btnTextVisible = document.querySelector('.collapsible__action--visible')
+const btnTextHidden = document.querySelector('.collapsible__action--hidden')
+content.style.visibility = 'hidden'
+btnTextVisible.style.display = 'none'
 
 const keyframesVisible = [
   {transform: 'translateY(-125%)', opacity: 0},
@@ -41,14 +44,28 @@ function hiddenCillapsibe () {
   }, 1000);
 }
 
+function visibleTextBtn () {
+  btnTextVisible.style.display = 'block'
+  btnTextHidden.style.display = 'none'
+}
+
+function hiddenTextBtn () {
+  setTimeout(()=> {
+    btnTextHidden.style.display = 'block'
+    btnTextVisible.style.display = 'none'
+  }, 1000);
+}
+
 btns.forEach(btn => {
   btn.addEventListener('click', ()=> {
   if (btn.classList.contains('collapsible__action--visible') && button.classList.contains('active-btn')) {
       removeClassActive ()
       hiddenCillapsibe ()
+      hiddenTextBtn()
     } else if (btn.classList.contains('collapsible__action--hidden') && button.classList.contains('active-btn') === false) {
       addClassActive ()
       visibleCillapsibe ()
+      visibleTextBtn ()
     }
   })
 })
