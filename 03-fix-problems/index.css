@@ -15,7 +15,7 @@ body {
 }
 
 .article__heading {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
     color: palevioletred
 }
 
@@ -27,8 +27,13 @@ body {
     margin-bottom: 16px;
 }
 
-.article__figure {
-    margin-top: 16px;
+img {
+    transform: translateX(-4214px) rotate(720deg);
+    position: relative;
+    left: 4214px;
+    height: auto;
+    max-width: 100%;
+    margin: 16px 0 0;
 }
 
 .figure__caption {
