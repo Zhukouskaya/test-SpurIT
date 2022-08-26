@@ -9,13 +9,22 @@ body {
     text-align: left;
 }
 
+img {
+    transform: translateX(-4214px) rotate(720deg);
+    position: relative;
+    left: 4214px;
+    height: auto;
+    max-width: 100%;
+    margin-top: 16px;
+}
+
 .article {
     max-width: 680px;
     padding: 24px;
 }
 
 .article__heading {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
     color: palevioletred
 }
 
@@ -25,15 +34,6 @@ body {
     font-style: italic;
     font-family: serif;
     margin-bottom: 16px;
-}
-
-img {
-    transform: translateX(-4214px) rotate(720deg);
-    position: relative;
-    left: 4214px;
-    height: auto;
-    max-width: 100%;
-    margin: 16px 0 0;
 }
 
 .figure__caption {
